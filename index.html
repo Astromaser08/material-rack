@@ -1,200 +1,173 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Reference Library</title>
+    <style>
+        :root {
+            --bg-color: #f4f5f7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e1e4e8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .material-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .material-card h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #111111;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .data-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .data-label {
+            font-weight: 600;
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        .data-value {
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Material Reference Library&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Clean, neutral color palette &amp; basic setup */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--bg-color: #f4f5f7;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--card-bg: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--text-main: #333333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--text-light: #666666;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--border-color: #e1e4e8;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>html {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>/* Smooth scrolling when jumping to a QR code link */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--bg-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-main);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Centered container for mobile and desktop */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 600px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid var(--border-color);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-light);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Styling for the individual material cards */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.material-card {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--card-bg);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--border-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.material-card h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #111111;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid var(--border-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.data-row {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.data-label {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 120px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-shrink: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.data-value {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-light);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-light);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;Material Reference Library&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Scan a QR code on the rack to view material specifications.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- MATERIAL 1: ACRYLIC --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- The 'id' here is what you use for the QR Code link (e.g., /#acrylic) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="acrylic" class="material-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Cast Acrylic (PMMA)&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Category:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Thermoplastic&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Properties:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;High impact resistance, excellent optical clarity, easily machined and laser-cut.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Common Uses:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Signage, point-of-sale displays, protective enclosures.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Sustainability:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Recycling Code 7. Can be recycled, but facilities are limited compared to PET/HDPE.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- MATERIAL 2: OAK --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="oak" class="material-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;European Oak&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Category:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Hardwood&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Properties:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Dense, durable, attractive grain pattern, resistant to fungal attacks.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Common Uses:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;High-end indoor furniture, flooring, architectural joinery.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Sustainability:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Renewable resource if FSC certified. Fully biodegradable.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- MATERIAL 3: ALUMINUM --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="aluminum" class="material-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Aluminium (6082-T6)&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Category:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Non-Ferrous Metal&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Properties:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Excellent strength-to-weight ratio, high corrosion resistance, easy to machine.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Common Uses:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;Structural framing, automotive parts, custom machined enclosures.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="data-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-label"&gt;Sustainability:&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="data-value"&gt;100% recyclable without loss of properties. High energy required for initial extraction.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&amp;copy; 2026 A-Level Product Design Project</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <div class="container">
+        <header>
+            <h1>Material Reference Library</h1>
+            <p>Scan a QR code on the rack to view material specifications.</p>
+        </header>
+
+        <main>
+            <section id="acrylic" class="material-card">
+                <h2>Cast Acrylic (PMMA)</h2>
+                <div class="data-row">
+                    <div class="data-label">Category:</div>
+                    <div class="data-value">Thermoplastic</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Properties:</div>
+                    <div class="data-value">High impact resistance, excellent optical clarity, easily machined and laser-cut.</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Common Uses:</div>
+                    <div class="data-value">Signage, point-of-sale displays, protective enclosures.</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Sustainability:</div>
+                    <div class="data-value">Recycling Code 7. Can be recycled, but facilities are limited compared to PET/HDPE.</div>
+                </div>
+            </section>
+
+            <section id="oak" class="material-card">
+                <h2>European Oak</h2>
+                <div class="data-row">
+                    <div class="data-label">Category:</div>
+                    <div class="data-value">Hardwood</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Properties:</div>
+                    <div class="data-value">Dense, durable, attractive grain pattern, resistant to fungal attacks.</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Common Uses:</div>
+                    <div class="data-value">High-end indoor furniture, flooring, architectural joinery.</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Sustainability:</div>
+                    <div class="data-value">Renewable resource if FSC certified. Fully biodegradable.</div>
+                </div>
+            </section>
+
+            <section id="aluminum" class="material-card">
+                <h2>Aluminium (6082-T6)</h2>
+                <div class="data-row">
+                    <div class="data-label">Category:</div>
+                    <div class="data-value">Non-Ferrous Metal</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Properties:</div>
+                    <div class="data-value">Excellent strength-to-weight ratio, high corrosion resistance, easy to machine.</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Common Uses:</div>
+                    <div class="data-value">Structural framing, automotive parts, custom machined enclosures.</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Sustainability:</div>
+                    <div class="data-value">100% recyclable without loss of properties. High energy required for initial extraction.</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2026 A-Level Product Design Project
+        </footer>
+    </div>
+
 </body>
 </html>
